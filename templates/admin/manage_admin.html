@@ -1,0 +1,40 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+<section class="main-content">
+    <div class="container py-1">
+        <h1 class="mb-2">Manage Admin</h1><br>
+        <a href="{% url 'add_admin' %}" class="btn btn-success">Add New Admin</a><br><br>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Nyasha Tumba</td>
+                <td>tumbry10</td>
+                <td>
+                    <a href="#" class="btn btn-outline-success">Edit</a>
+                    <a href="#" class="btn btn-outline-danger">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Nallen Tumba</td>
+                <td>nashnallen10</td>
+                <td>
+                    <a href="#" class="btn btn-outline-success">Edit</a>
+                    <a href="#" class="btn btn-outline-danger">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</section>
+{% endblock content %}

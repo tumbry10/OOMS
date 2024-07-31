@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from OOMS import settings
+from dashboard import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', views.home, name='home'),
+    path('admin_dashboard', views.admin_dashboard, name='admin_dashboard'),
+    path('manage_admin', views.manage_admin, name='manage_admin'),
+    path('add_admin', views.add_admin, name='add_admin'),
+]+ static(settings.STATIC_URL, document_root= settings.STATICFILES_DIRS) +static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+

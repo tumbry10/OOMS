@@ -1,0 +1,23 @@
+/* 
+    Author: Tumbry10
+    THeme: OOMS
+    Versio: 1.0
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.footer {
+    background-color: bisque;
+}
+.footer .wrapper {
+    padding: 0.5%;
+    margin: 0 auto;
+}
+.link-header {
+    text-decoration: none;
+    color: black;
+}
+.link-header:hover {
+    color: antiquewhite;
+}

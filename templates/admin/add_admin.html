@@ -1,0 +1,26 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+<section class="main-content">
+    <div class="container py-1">
+        <h1 class="mb-2">Add New Admin</h1><hr>
+        <form>
+            <div class="mb-3 px-3">
+              <label for="full_name" class="form-label">Admin First & Last Name (Surname) :</label>
+              <input type="text" class="form-control" id="full_name" placeholder="Enter First Name and Surname for Admin">
+            </div>
+            <div class="mb-3 px-3">
+                <label for="username" class="form-label">Admin Username :</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter Username for Admin">
+              </div>
+            <div class="mb-3 px-3">
+              <label for="password" class="form-label">Admin Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter Password for Admin">
+            </div>
+            <div class="mb-3 px-3">
+                <input type="submit" name="submit" value="Add New Admin" class="form-control btn btn-success">
+            </div>
+          </form>
+    </div>
+</section>
+{% endblock content %}
