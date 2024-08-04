@@ -1,0 +1,18 @@
+/* 
+    Author: Tumbry10
+    THeme: OOMS
+    Versio: 1.0
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.login-btn {
+    font-weight: bold;
+    color: black;
+}
+
+p {
+    font-size: large;
+}

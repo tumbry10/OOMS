@@ -136,3 +136,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT =(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = "dashboard.CustomUser"
+AUTHENTICATION_BACKENDS = ['dashboard.EmailBackEnd.EmailBackEnd']

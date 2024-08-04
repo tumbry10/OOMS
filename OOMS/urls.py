@@ -25,5 +25,7 @@ urlpatterns = [
     path('admin_dashboard', views.admin_dashboard, name='admin_dashboard'),
     path('manage_admin', views.manage_admin, name='manage_admin'),
     path('add_admin', views.add_admin, name='add_admin'),
+    path('user_login', views.user_login, name='user_login'),
+    path('user_logout', views.user_logout, name='user_logout'),
 ]+ static(settings.STATIC_URL, document_root= settings.STATICFILES_DIRS) +static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
