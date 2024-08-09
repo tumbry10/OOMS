@@ -48,3 +48,27 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('user_login')
+
+def manage_staff(request):
+    return render(request, 'admin/manage_staff.html')
+
+def add_staff(request):
+    if request.method == 'POST':
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        gender = request.POST.get('gender')
+
+        try:
+            user = CustomUser.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email, password=password, user_type=2)
+            user.salesrep.gender=gender
+            user.save()
+            messages.success(request, 'Sales Rep Successfully Added')
+            return redirect('add_staff')
+        except:
+            messages.error(request, 'Failed To Add Sales Rep, Retry Again')
+            return redirect('add_staff')
+    else:
+        return render(request, 'admin/add_staff.html')
